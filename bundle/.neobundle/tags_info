@@ -1,2 +1,5 @@
+jshint2.vim
 neobundle.vim
-neocomplcache
+neocomplcache.vim
+neosnippet-snippet
+vimfiler.vim

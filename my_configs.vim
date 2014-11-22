@@ -19,6 +19,10 @@ colorscheme pyte
 colorscheme peaksea
 colorscheme DarkDefault
 
+highlight Pmenu ctermbg=4
+highlight PmenuSel ctermbg=5
+highlight PmenuSbar ctermbg=4
+
 "" autocmd FileType python set omnifunc=pythoncomplete#Complete
 "" autocmd FileType c set omnifunc=ccomplete#Complete
 "" autocmd FileType conf set expandtab! tabstop=4 shiftwidth=4
@@ -37,17 +41,19 @@ let g:changelog_timeformat = "%Y-%m-%d"
 let g:changelog_username = "Masashi YOKOTA "
 
 "" NeoBundle
+set nocompatible
+filetype plugin off
 if has('vim_starting')
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#end()
 filetype plugin on
 NeoBundleCheck
 
-
 "" neocomplcache
-NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplcache.vim'
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplcache.
@@ -81,4 +87,12 @@ inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
+
+""" vimfilter
+NeoBundle 'Shougo/vimfiler.vim'
+nnoremap <leader>e :VimFilerExplore -split -winwidth=30 -find -no-quit<Cr>
+
+
+NeoBundle 'Shougo/neosnippet-snippet'
+NeoBundle 'Shutnik/jshint2.vim'
 
