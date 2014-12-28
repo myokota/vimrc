@@ -13,6 +13,7 @@ set cindent
 set autoindent
 set ignorecase
 set smartcase
+set foldlevel=100
 
 colorscheme DarkDefault
 colorscheme pyte
@@ -29,13 +30,15 @@ highlight PmenuSbar ctermbg=4
 "" autocmd FileType sh set expandtab! tabstop=4 shiftwidth=4
 "" autocmd BufNewFile,BufRead *.py set expandtab tabstop=4 shiftwidth=4
 
-autocmd FileType python set expandtab tabstop=4 shiftwidth=4 omnifunc=pythoncomplete#Complete
-autocmd FileType c set expandtab! tabstop=8 shiftwidth=8 omnifunc=ccomplete#Complete
-autocmd FileType sh set expandtab! tabstop=4 shiftwidth=4
-
 autocmd BufNewFile,BufRead *.sh set filetype=sh
 autocmd BufNewFile,BufRead *.py set filetype=python
 autocmd BufNewFile,BufRead *.c set filetype=c
+autocmd BufNewFile,BufRead *.js set filetype=javascript
+
+autocmd FileType python set expandtab tabstop=4 shiftwidth=4 omnifunc=pythoncomplete#Complete
+autocmd FileType c set expandtab! tabstop=8 shiftwidth=8 omnifunc=ccomplete#Complete
+autocmd FileType sh set expandtab! tabstop=4 shiftwidth=4
+autocmd FileType javascript set expandtab tabstop=2 shiftwidth=2 smartindent noautoindent omnifunc=ccomplete#Complete
 
 let g:changelog_timeformat = "%Y-%m-%d"
 let g:changelog_username = "Masashi YOKOTA "
