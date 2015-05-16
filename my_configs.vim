@@ -4,16 +4,17 @@ set backupdir=$HOME/.vim_backup
 set number
 set hlsearch
 set incsearch
-set tabstop=8
-set shiftwidth=8
+set tabstop=2
+set shiftwidth=2
 set backspace=2
 set title
-set noexpandtab
+set expandtab
 set cindent
 set autoindent
 set ignorecase
 set smartcase
 set foldlevel=100
+set clipboard=unnamedplus,unnamed,autoselect
 
 colorscheme DarkDefault
 colorscheme pyte
@@ -41,6 +42,8 @@ autocmd FileType python set expandtab tabstop=4 shiftwidth=4 omnifunc=pythoncomp
 autocmd FileType c set expandtab! tabstop=8 shiftwidth=8 omnifunc=ccomplete#Complete
 autocmd FileType sh set expandtab! tabstop=4 shiftwidth=4
 autocmd FileType javascript set expandtab tabstop=2 shiftwidth=2 smartindent noautoindent foldlevel=100 omnifunc=javascriptcomplete#Complete
+
+autocmd FileType markdown set expandtab tabstop=2 shiftwidth=2
 
 let g:changelog_timeformat = "%Y-%m-%d"
 let g:changelog_username = "Masashi YOKOTA "
