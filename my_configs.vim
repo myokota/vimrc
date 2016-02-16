@@ -16,6 +16,7 @@ set smartcase
 set foldlevel=100
 set clipboard=unnamedplus,unnamed,autoselect
 set fileencodings=euc-jp,sjis,utf-8
+set virtualedit=block
 
 colorscheme DarkDefault
 colorscheme pyte
