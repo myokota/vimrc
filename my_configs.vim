@@ -105,3 +105,10 @@ nnoremap <leader>e :VimFilerExplore -split -winwidth=30 -find -no-quit<Cr>
 NeoBundle 'Shougo/neosnippet-snippet'
 NeoBundle 'Shutnik/jshint2.vim'
 
+""" Markdown previewer
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
+au BufRead,BufNewFile *.md set filetype=markdown
+
